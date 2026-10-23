@@ -474,6 +474,22 @@
                         <svg class="w-[18px] h-[18px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <span class="sidebar-text">Kehadiran Dosen</span>
                     </a>
+                    
+<a href="{{ route('admin.activity-log.index') }}"
+   class="sidebar-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-siakad-secondary text-sm font-medium {{ request()->is('admin/activity-log*') ? 'active' : '' }}">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="20" height="20" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round"
+         class="shrink-0">
+        <path d="M3 3v18h18"/>
+        <path d="M18 17V9"/>
+        <path d="M13 17V5"/>
+        <path d="M8 17v-3"/>
+    </svg>
+    <span class="sidebar-text">Riwayat Aktivitas</span>
+</a>
+
                     @endif
 
                     @if(Auth::user()->role === 'mahasiswa')
